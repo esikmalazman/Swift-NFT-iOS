@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		7F2A96AE26B9FCD300FE31B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2A96AD26B9FCD300FE31B1 /* AppDelegate.swift */; };
 		7F2A96B026B9FCD300FE31B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2A96AF26B9FCD300FE31B1 /* SceneDelegate.swift */; };
-		7F2A96B226B9FCD300FE31B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2A96B126B9FCD300FE31B1 /* ViewController.swift */; };
+		7F2A96B226B9FCD300FE31B1 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2A96B126B9FCD300FE31B1 /* HomeVC.swift */; };
 		7F2A96B526B9FCD300FE31B1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F2A96B326B9FCD300FE31B1 /* Main.storyboard */; };
 		7F2A96B726B9FCDB00FE31B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F2A96B626B9FCDB00FE31B1 /* Assets.xcassets */; };
 		7F2A96BA26B9FCDB00FE31B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F2A96B826B9FCDB00FE31B1 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		7F2A96AA26B9FCD300FE31B1 /* Swift-NFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-NFT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7F2A96AD26B9FCD300FE31B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7F2A96AF26B9FCD300FE31B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		7F2A96B126B9FCD300FE31B1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F2A96B126B9FCD300FE31B1 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		7F2A96B426B9FCD300FE31B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7F2A96B626B9FCDB00FE31B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7F2A96B926B9FCDB00FE31B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				7F2A96AD26B9FCD300FE31B1 /* AppDelegate.swift */,
 				7F2A96AF26B9FCD300FE31B1 /* SceneDelegate.swift */,
-				7F2A96B126B9FCD300FE31B1 /* ViewController.swift */,
+				7F2A96B126B9FCD300FE31B1 /* HomeVC.swift */,
 				7F2A96B326B9FCD300FE31B1 /* Main.storyboard */,
 				7F2A96B626B9FCDB00FE31B1 /* Assets.xcassets */,
 				7F2A96B826B9FCDB00FE31B1 /* LaunchScreen.storyboard */,
@@ -137,7 +137,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7F2A96B226B9FCD300FE31B1 /* ViewController.swift in Sources */,
+				7F2A96B226B9FCD300FE31B1 /* HomeVC.swift in Sources */,
 				7F2A96AE26B9FCD300FE31B1 /* AppDelegate.swift in Sources */,
 				7F2A96B026B9FCD300FE31B1 /* SceneDelegate.swift in Sources */,
 			);
@@ -286,7 +286,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CX2G82J2TK;
 				INFOPLIST_FILE = "Swift-NFT/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -294,6 +296,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esikmalazman.Swift-NFT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,7 +307,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = CX2G82J2TK;
 				INFOPLIST_FILE = "Swift-NFT/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -312,6 +317,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.esikmalazman.Swift-NFT";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
