@@ -15,4 +15,6 @@ struct Constants {
         static let swifties_1000 = "com.esikmalazman.Swift_NFT.premium"
         static let swifties_3000 = "com.esikmalazman.Swift_NFT.super_premium"
     }
+    
+    
 }
