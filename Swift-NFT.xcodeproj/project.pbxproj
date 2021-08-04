@@ -16,6 +16,8 @@
 		7F2A96C726BA03B800FE31B1 /* SwiftiesCoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2A96C626BA03B800FE31B1 /* SwiftiesCoinCell.swift */; };
 		7F2A96CF26BA050E00FE31B1 /* SwiftiesCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2A96CE26BA050E00FE31B1 /* SwiftiesCoin.swift */; };
 		7F2A96D426BA06E200FE31B1 /* SwiftStoreVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2A96D326BA06E200FE31B1 /* SwiftStoreVC.swift */; };
+		7F2A96D926BA186600FE31B1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2A96D826BA186600FE31B1 /* Constants.swift */; };
+		7F2A96DE26BA1B2A00FE31B1 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F2A96DD26BA1B2A00FE31B1 /* StoreKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		7F2A96C626BA03B800FE31B1 /* SwiftiesCoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftiesCoinCell.swift; sourceTree = "<group>"; };
 		7F2A96CE26BA050E00FE31B1 /* SwiftiesCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftiesCoin.swift; sourceTree = "<group>"; };
 		7F2A96D326BA06E200FE31B1 /* SwiftStoreVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftStoreVC.swift; sourceTree = "<group>"; };
+		7F2A96D826BA186600FE31B1 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		7F2A96DD26BA1B2A00FE31B1 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F2A96DE26BA1B2A00FE31B1 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -48,6 +53,7 @@
 			children = (
 				7F2A96AC26B9FCD300FE31B1 /* Swift-NFT */,
 				7F2A96AB26B9FCD300FE31B1 /* Products */,
+				7F2A96DC26BA1B2A00FE31B1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +70,7 @@
 			children = (
 				7F2A96AD26B9FCD300FE31B1 /* AppDelegate.swift */,
 				7F2A96AF26B9FCD300FE31B1 /* SceneDelegate.swift */,
+				7F2A96D826BA186600FE31B1 /* Constants.swift */,
 				7F2A96D126BA051400FE31B1 /* Model */,
 				7F2A96CB26BA04DE00FE31B1 /* Controller */,
 				7F2A96C926BA04D600FE31B1 /* View */,
@@ -98,6 +105,14 @@
 				7F2A96CE26BA050E00FE31B1 /* SwiftiesCoin.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7F2A96DC26BA1B2A00FE31B1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F2A96DD26BA1B2A00FE31B1 /* StoreKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,6 +189,7 @@
 				7F2A96B226B9FCD300FE31B1 /* HomeVC.swift in Sources */,
 				7F2A96D426BA06E200FE31B1 /* SwiftStoreVC.swift in Sources */,
 				7F2A96AE26B9FCD300FE31B1 /* AppDelegate.swift in Sources */,
+				7F2A96D926BA186600FE31B1 /* Constants.swift in Sources */,
 				7F2A96B026B9FCD300FE31B1 /* SceneDelegate.swift in Sources */,
 				7F2A96CF26BA050E00FE31B1 /* SwiftiesCoin.swift in Sources */,
 			);
