@@ -9,11 +9,16 @@ import UIKit
 
 class HomeVC: UIViewController {
 
+
+    @IBOutlet weak var swiftiesCoin: UILabel!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func topupPressed(_ sender: UIButton) {
+    }
+    
 }
 
