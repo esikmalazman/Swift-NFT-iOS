@@ -8,7 +8,7 @@
 import UIKit
 
 
-struct SwiftiesCoin {
+struct Consumables {
     
     let image : UIImage
     let coin : String
