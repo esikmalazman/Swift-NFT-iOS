@@ -69,7 +69,6 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Topup more swifties"/>
                                 <connections>
-                                    <action selector="topupPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="um8-EL-tRp"/>
                                     <segue destination="bjM-A9-grD" kind="show" id="LJJ-2j-rXj"/>
                                 </connections>
                             </button>

@@ -10,13 +10,9 @@ import StoreKit
 
 class SwiftStoreVC: UIViewController {
     
-    var store = Store()
-    var totalCoins : Int?
-    var initialCoins : Int = 0
+    var storeData = Store()
+    var storeManager = StoreManager()
 
-
-    
-    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -43,76 +39,6 @@ class SwiftStoreVC: UIViewController {
             /// User cannot make payments
         }
     }
-    
-    // Probably error here
-    func calculateCoins(from purchaseCoins: Int) -> Int {
-        
-        
-        print("purchaseCoins : \(purchaseCoins)")
-        
-        let walletsBalance = UserDefaults.standard.bool(forKey: "wallets")
-        print("coinsAvailable \(walletsBalance)")
-        
-        if UserDefaults.exists(key: "wallets") {
-            
-            initialCoins = UserDefaults.standard.integer(forKey: "wallets")
-            totalCoins = initialCoins + purchaseCoins
-            print("Total Coins : \(totalCoins!)")
-            
-            return totalCoins!
-            
-        } else {
-            
-            totalCoins = initialCoins + purchaseCoins
-            print("Total Coins : \(totalCoins!)")
-            return totalCoins!
-        }
-    }
-    
-    func getProductID(from coins : String) -> String {
-        
-        var productID : String  {
-            switch coins {
-            case "100":
-                return Constants.ProductID.swifties_100
-            case "300":
-                return Constants.ProductID.swifties_300
-            case "1000":
-                return Constants.ProductID.swifties_300
-            case "3000":
-                return Constants.ProductID.swifties_3000
-            default:
-                return "There's no productID for selected packaged"
-            }
-        }
-        
-        return productID
-    }
-    
-    func getCoinsFromProductID(from productId : String)  {
-        
-        var coins : Int  {
-            switch productId {
-            case Constants.ProductID.swifties_100:
-                return 100
-            case Constants.ProductID.swifties_300:
-                return 300
-            case Constants.ProductID.swifties_1000:
-                return 1000
-            case Constants.ProductID.swifties_3000:
-                return 3000
-            default:
-                return 0
-            }
-        }
-        
-        print("getCoinsFromProductID : \(coins)")
-        let savedCoins  = calculateCoins(from: coins)
-        UserDefaults.standard.set(savedCoins, forKey: "wallets")
-        print("Calculated coins : \(savedCoins)")
-        print("Saved coins = \(UserDefaults.standard.integer(forKey: "wallets"))")
-        
-    }
 }
 
 //MARK:- IAP menthods
@@ -130,15 +56,9 @@ extension SwiftStoreVC : SKPaymentTransactionObserver {
                 /// Payment Success
                 print("Payment Success")
                 
-                // TODO : Add method to be active after purchase succes
-                // - Save to user defaults, Update coin value
                 let transactionId = transaction.payment.productIdentifier
                 print("Transaction Id : \(transactionId)")
-                getCoinsFromProductID(from: transactionId)
-                //print("Coins After Transaction Success: \(coins)")
-                
-                //let calculatedCoins = calculateCoins(from: coins)
-                //print("Total coins before  save to UserDefautlts : \(calculatedCoins)")
+                storeManager.getCoinsFromProductID(from: transactionId)
                 
                 // End payment queue from App Store
                 SKPaymentQueue.default().finishTransaction(transaction)
@@ -157,12 +77,12 @@ extension SwiftStoreVC : SKPaymentTransactionObserver {
 extension SwiftStoreVC : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return store.swiftConsumables.count
+        return storeData.consumables().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let listOfSwiftCoin = store.swiftConsumables[indexPath.row]
+        let listOfSwiftCoin = storeData.consumables()[indexPath.row]
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SwiftiesCoinCell
         
@@ -179,14 +99,12 @@ extension SwiftStoreVC : UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         // Locate what purchases to be triggered
-        let coins = store.swiftConsumables[indexPath.row].coin
-        let productId = getProductID(from: coins)
+        let selectedCoins = storeData.consumables()[indexPath.row].coin
+        let productId = storeManager.getProductIDFromCoins(from: selectedCoins)
         
         didPurchasedCoins(at: productId)
         
-        print("Coin selected : \(coins), Product ID : \(productId)")
+        print("Coin selected : \(selectedCoins), Product ID : \(productId)")
     }
-    
-    
 }
 

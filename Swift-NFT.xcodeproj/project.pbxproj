@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		7F10DB2D26BD387C00393575 /* UserDefaultsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10DB2C26BD387C00393575 /* UserDefaultsExtension.swift */; };
+		7F10DB2D26BD387C00393575 /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10DB2C26BD387C00393575 /* UserDefaults.swift */; };
 		7F10DB3126BD59A100393575 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10DB3026BD59A100393575 /* Store.swift */; };
 		7F10DB3726BD5E3000393575 /* StoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F10DB3626BD5E3000393575 /* StoreManager.swift */; };
 		7F2A96AE26B9FCD300FE31B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F2A96AD26B9FCD300FE31B1 /* AppDelegate.swift */; };
@@ -24,7 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		7F10DB2C26BD387C00393575 /* UserDefaultsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsExtension.swift; sourceTree = "<group>"; };
+		7F10DB2C26BD387C00393575 /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 		7F10DB3026BD59A100393575 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		7F10DB3626BD5E3000393575 /* StoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreManager.swift; sourceTree = "<group>"; };
 		7F2A96AA26B9FCD300FE31B1 /* Swift-NFT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-NFT.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -77,13 +77,12 @@
 				7F2A96AD26B9FCD300FE31B1 /* AppDelegate.swift */,
 				7F2A96AF26B9FCD300FE31B1 /* SceneDelegate.swift */,
 				7F2A96D826BA186600FE31B1 /* Constants.swift */,
+				7FFFA93626BDF7B00039B67B /* Extensions */,
 				7F2A96D126BA051400FE31B1 /* Model */,
 				7F2A96CB26BA04DE00FE31B1 /* Controller */,
 				7F2A96C926BA04D600FE31B1 /* View */,
 				7F2A96B626B9FCDB00FE31B1 /* Assets.xcassets */,
-				7F2A96B826B9FCDB00FE31B1 /* LaunchScreen.storyboard */,
 				7F2A96BB26B9FCDB00FE31B1 /* Info.plist */,
-				7F10DB2C26BD387C00393575 /* UserDefaultsExtension.swift */,
 			);
 			path = "Swift-NFT";
 			sourceTree = "<group>";
@@ -92,6 +91,7 @@
 			isa = PBXGroup;
 			children = (
 				7F2A96B326B9FCD300FE31B1 /* Main.storyboard */,
+				7F2A96B826B9FCDB00FE31B1 /* LaunchScreen.storyboard */,
 				7F2A96C626BA03B800FE31B1 /* SwiftiesCoinCell.swift */,
 			);
 			path = View;
@@ -122,6 +122,14 @@
 				7F2A96DD26BA1B2A00FE31B1 /* StoreKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7FFFA93626BDF7B00039B67B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				7F10DB2C26BD387C00393575 /* UserDefaults.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,7 +209,7 @@
 				7F2A96AE26B9FCD300FE31B1 /* AppDelegate.swift in Sources */,
 				7F2A96D926BA186600FE31B1 /* Constants.swift in Sources */,
 				7F2A96B026B9FCD300FE31B1 /* SceneDelegate.swift in Sources */,
-				7F10DB2D26BD387C00393575 /* UserDefaultsExtension.swift in Sources */,
+				7F10DB2D26BD387C00393575 /* UserDefaults.swift in Sources */,
 				7F2A96CF26BA050E00FE31B1 /* Consumables.swift in Sources */,
 				7F10DB3726BD5E3000393575 /* StoreManager.swift in Sources */,
 			);
