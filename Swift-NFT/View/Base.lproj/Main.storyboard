@@ -146,27 +146,23 @@
         <scene sceneID="phA-Rp-eaY">
             <objects>
                 <viewController id="bjM-A9-grD" customClass="SwiftStoreVC" customModule="Swift_NFT" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="yZJ-B3-e6U">
+                    <view key="view" contentMode="scaleToFill" id="yZJ-B3-e6U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1gu-57-135">
-                                <rect key="frame" x="0.0" y="165" width="414" height="729"/>
+                                <rect key="frame" x="0.0" y="165" width="414" height="731"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="729" id="Lhg-Iy-CTP"/>
-                                    <constraint firstAttribute="width" constant="414" id="QYT-sS-Hje"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="QIn-w8-h6h">
                                     <size key="itemSize" width="153" height="222"/>
                                     <size key="estimatedItemSize" width="174" height="247"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="0lt-jZ-ftD" customClass="SwiftiesCoinCell" customModule="Swift_NFT" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="153" height="222"/>
+                                        <rect key="frame" x="10" y="0.0" width="153" height="222"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SFR-tm-Ix9">
                                             <rect key="frame" x="0.0" y="0.0" width="153" height="222"/>
@@ -222,10 +218,10 @@
                         <viewLayoutGuide key="safeArea" id="r5c-ig-Ej5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1gu-57-135" firstAttribute="leading" secondItem="r5c-ig-Ej5" secondAttribute="leading" id="7ha-PR-qAM"/>
-                            <constraint firstItem="1gu-57-135" firstAttribute="trailing" secondItem="r5c-ig-Ej5" secondAttribute="trailing" id="Hxw-n9-53B"/>
-                            <constraint firstItem="1gu-57-135" firstAttribute="top" secondItem="r5c-ig-Ej5" secondAttribute="top" constant="25" id="b0a-Es-3u9"/>
-                            <constraint firstAttribute="bottom" secondItem="1gu-57-135" secondAttribute="bottom" id="bjE-zc-XGd"/>
+                            <constraint firstItem="1gu-57-135" firstAttribute="top" secondItem="r5c-ig-Ej5" secondAttribute="top" constant="25" id="KCI-jt-CK6"/>
+                            <constraint firstItem="1gu-57-135" firstAttribute="trailing" secondItem="r5c-ig-Ej5" secondAttribute="trailing" id="OsT-tW-Rgs"/>
+                            <constraint firstItem="1gu-57-135" firstAttribute="leading" secondItem="r5c-ig-Ej5" secondAttribute="leading" id="kbe-Yj-tlL"/>
+                            <constraint firstAttribute="bottom" secondItem="1gu-57-135" secondAttribute="bottom" id="pwH-i0-rfO"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Swifties Store" id="8Le-Vu-7yg"/>
