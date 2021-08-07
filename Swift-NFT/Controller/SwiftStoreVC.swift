@@ -92,9 +92,7 @@ extension SwiftStoreVC : UICollectionViewDataSource {
         cell.coinsImage.image = listOfSwiftCoin.image
         cell.coinsValue.text = "\(listOfSwiftCoin.coin) Swifties"
         cell.price.text = listOfSwiftCoin.price
-        
-        
-        
+    
         return cell
     }
 }
