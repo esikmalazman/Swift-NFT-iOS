@@ -12,7 +12,7 @@ class SwiftStoreVC: UIViewController {
     
     var storeData = Store()
     var storeManager = StoreManager()
-
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -21,6 +21,7 @@ class SwiftStoreVC: UIViewController {
         collectionView.delegate = self
         // Assign SKPaymentTransactionObserver delegate to the VC
         SKPaymentQueue.default().add(self)
+    
     }
     
     func didPurchasedCoins(at package : String) {
@@ -42,6 +43,7 @@ class SwiftStoreVC: UIViewController {
 }
 
 //MARK:- IAP menthods
+
 // Allow to return status of transactioan process, unlock some functionality
 extension SwiftStoreVC : SKPaymentTransactionObserver {
     
@@ -74,6 +76,7 @@ extension SwiftStoreVC : SKPaymentTransactionObserver {
 }
 
 //MARK:- UICollectionView DataSource
+
 extension SwiftStoreVC : UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -87,8 +90,10 @@ extension SwiftStoreVC : UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath) as! SwiftiesCoinCell
         
         cell.coinsImage.image = listOfSwiftCoin.image
-        cell.coinsValue.text = listOfSwiftCoin.coin
+        cell.coinsValue.text = "\(listOfSwiftCoin.coin) Swifties"
         cell.price.text = listOfSwiftCoin.price
+        
+        
         
         return cell
     }

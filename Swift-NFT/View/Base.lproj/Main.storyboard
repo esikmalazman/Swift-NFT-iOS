@@ -8,6 +8,20 @@
         <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Inter-Bold.ttf">
+            <string>Inter-Bold</string>
+        </array>
+        <array key="Inter-Medium.ttf">
+            <string>Inter-Medium</string>
+        </array>
+        <array key="Inter-Regular.ttf">
+            <string>Inter-Regular</string>
+        </array>
+        <array key="Inter-SemiBold.ttf">
+            <string>Inter-SemiBold</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--Your wallet-->
         <scene sceneID="tne-QT-ifu">
@@ -17,57 +31,81 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="card-background" translatesAutoresizingMaskIntoConstraints="NO" id="Xel-Hw-VKQ">
-                                <rect key="frame" x="22" y="176" width="370" height="231"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card-background" translatesAutoresizingMaskIntoConstraints="NO" id="Xel-Hw-VKQ">
+                                <rect key="frame" x="22" y="190" width="370" height="231"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="231" id="OzM-hL-A6r"/>
+                                    <constraint firstAttribute="width" constant="370" id="dBz-AE-SlP"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="NFT-button-background" translatesAutoresizingMaskIntoConstraints="NO" id="bv5-mq-zuG">
-                                <rect key="frame" x="53" y="613" width="308" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="NFT-button-background" translatesAutoresizingMaskIntoConstraints="NO" id="bv5-mq-zuG">
+                                <rect key="frame" x="43" y="615" width="328" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="328" id="Fyj-Jn-suc"/>
+                                    <constraint firstAttribute="height" constant="74" id="n0x-pS-2qB"/>
+                                </constraints>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="balance-background" highlightedImage="balance-background" translatesAutoresizingMaskIntoConstraints="NO" id="f1c-SZ-eJ9">
-                                <rect key="frame" x="22" y="437" width="365" height="74"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="balance-background" highlightedImage="balance-background" translatesAutoresizingMaskIntoConstraints="NO" id="f1c-SZ-eJ9">
+                                <rect key="frame" x="24.5" y="441" width="365" height="74"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="365" id="EJX-nu-p0W"/>
+                                    <constraint firstAttribute="height" constant="74" id="OVz-O3-WWl"/>
+                                </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card Number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xck-in-FaM">
-                                <rect key="frame" x="43" y="292" width="344" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Number" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xck-in-FaM">
+                                <rect key="frame" x="35" y="280" width="344" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="344" id="EOb-Q9-bj1"/>
+                                    <constraint firstAttribute="height" constant="39" id="Zwi-nx-LVl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Card Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eak-zv-F0a">
-                                <rect key="frame" x="43" y="339" width="344" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card Name" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eak-zv-F0a">
+                                <rect key="frame" x="35" y="324" width="344" height="39"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="39" id="Lgy-aO-RUL"/>
+                                    <constraint firstAttribute="width" constant="344" id="RKE-WM-7bp"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Balance" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGO-oh-Agb">
-                                <rect key="frame" x="43" y="456" width="86" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coins" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bid-fU-Dcv">
-                                <rect key="frame" x="317" y="455" width="51" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2di-Ib-ssV">
-                                <rect key="frame" x="178" y="455" width="131" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omf-bh-7gz">
-                                <rect key="frame" x="126" y="635" width="215" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Topup more swifties"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="C0l-di-3C2">
+                                <rect key="frame" x="38" y="466" width="338" height="24.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Balance" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SGO-oh-Agb">
+                                        <rect key="frame" x="0.0" y="0.0" width="156.5" height="24.5"/>
+                                        <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="20"/>
+                                        <color key="textColor" red="0.12941176469999999" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="8v2-5w-oKD">
+                                        <rect key="frame" x="181.5" y="0.0" width="156.5" height="24.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2di-Ib-ssV">
+                                                <rect key="frame" x="0.0" y="0.0" width="68.5" height="24.5"/>
+                                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
+                                                <color key="textColor" red="0.99607843139999996" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coins" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bid-fU-Dcv">
+                                                <rect key="frame" x="88.5" y="0.0" width="68" height="24.5"/>
+                                                <fontDescription key="fontDescription" name="Inter-Bold" family="Inter" pointSize="20"/>
+                                                <color key="textColor" red="0.99607843137254903" green="0.5607843137254902" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Omf-bh-7gz">
+                                <rect key="frame" x="116.5" y="630" width="211" height="39"/>
+                                <fontDescription key="fontDescription" name="Inter-Regular" family="Inter" pointSize="22"/>
+                                <state key="normal" title="Topup more swifties">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <segue destination="bjM-A9-grD" kind="show" id="LJJ-2j-rXj"/>
                                 </connections>
@@ -75,9 +113,28 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eak-zv-F0a" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="4xT-7Y-GyE"/>
+                            <constraint firstItem="f1c-SZ-eJ9" firstAttribute="top" secondItem="Xel-Hw-VKQ" secondAttribute="bottom" constant="20" id="I40-oe-k12"/>
+                            <constraint firstItem="bv5-mq-zuG" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="L1p-oQ-Nyk"/>
+                            <constraint firstItem="Omf-bh-7gz" firstAttribute="top" secondItem="f1c-SZ-eJ9" secondAttribute="bottom" constant="115" id="LYC-cq-zFf"/>
+                            <constraint firstItem="Xel-Hw-VKQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Q0m-dI-xcu"/>
+                            <constraint firstItem="xck-in-FaM" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="140" id="S5h-kV-LNS"/>
+                            <constraint firstItem="Xel-Hw-VKQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="S6H-1v-dzS"/>
+                            <constraint firstItem="xck-in-FaM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XAO-bh-6KI"/>
+                            <constraint firstItem="Omf-bh-7gz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="15" id="YvU-c6-q22"/>
+                            <constraint firstItem="bv5-mq-zuG" firstAttribute="top" secondItem="f1c-SZ-eJ9" secondAttribute="bottom" constant="100" id="ZUR-YG-ayf"/>
+                            <constraint firstItem="C0l-di-3C2" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="38" id="cgy-hK-aHB"/>
+                            <constraint firstItem="C0l-di-3C2" firstAttribute="top" secondItem="Xel-Hw-VKQ" secondAttribute="bottom" constant="45" id="dFF-vE-o5D"/>
+                            <constraint firstItem="f1c-SZ-eJ9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vrX-2R-zm4"/>
+                            <constraint firstItem="eak-zv-F0a" firstAttribute="top" secondItem="xck-in-FaM" secondAttribute="bottom" constant="5" id="wWf-Sd-Re0"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="C0l-di-3C2" secondAttribute="trailing" constant="38" id="xhd-gy-qZv"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Your wallet" id="Hgz-E9-pNZ"/>
                     <connections>
+                        <outlet property="cardName" destination="eak-zv-F0a" id="22J-gO-FkJ"/>
+                        <outlet property="cardNumber" destination="xck-in-FaM" id="tbp-km-Gq1"/>
                         <outlet property="swiftiesCoin" destination="2di-Ib-ssV" id="erp-Hh-bte"/>
                     </connections>
                 </viewController>
@@ -89,16 +146,19 @@
         <scene sceneID="phA-Rp-eaY">
             <objects>
                 <viewController id="bjM-A9-grD" customClass="SwiftStoreVC" customModule="Swift_NFT" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="yZJ-B3-e6U">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="yZJ-B3-e6U">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1gu-57-135">
-                                <rect key="frame" x="20" y="152" width="361" height="710"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="1gu-57-135">
+                                <rect key="frame" x="0.0" y="165" width="414" height="729"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QIn-w8-h6h">
-                                    <size key="itemSize" width="174" height="247"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="729" id="Lhg-Iy-CTP"/>
+                                    <constraint firstAttribute="width" constant="414" id="QYT-sS-Hje"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="QIn-w8-h6h">
+                                    <size key="itemSize" width="153" height="222"/>
                                     <size key="estimatedItemSize" width="174" height="247"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -106,33 +166,50 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="cell" id="0lt-jZ-ftD" customClass="SwiftiesCoinCell" customModule="Swift_NFT" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="160" height="228"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="153" height="222"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="SFR-tm-Ix9">
-                                            <rect key="frame" x="0.0" y="0.0" width="160" height="228"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="153" height="222"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YIC-of-PUe">
-                                                    <rect key="frame" x="8" y="15" width="144" height="111"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YIC-of-PUe">
+                                                    <rect key="frame" x="4.5" y="15" width="144" height="111"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="144" id="ETo-HT-pNe"/>
+                                                        <constraint firstAttribute="height" constant="111" id="Q6a-ah-iU7"/>
+                                                    </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Coins" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKF-Gg-EjZ">
-                                                    <rect key="frame" x="0.0" y="144" width="160" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyz-So-q7d">
+                                                    <rect key="frame" x="0.0" y="186" width="153" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="7FB-Nf-6iY"/>
+                                                        <constraint firstAttribute="width" constant="153" id="Pct-cc-CQc"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Inter-SemiBold" family="Inter" pointSize="20"/>
+                                                    <color key="textColor" red="0.12941176469999999" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zyz-So-q7d">
-                                                    <rect key="frame" x="0.0" y="188" width="160" height="25"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coins" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PKF-Gg-EjZ">
+                                                    <rect key="frame" x="0.0" y="146" width="153" height="25"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="25" id="3dL-r8-xxz"/>
+                                                        <constraint firstAttribute="width" constant="153" id="Xsa-rm-zu4"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" name="Inter-Medium" family="Inter" pointSize="20"/>
+                                                    <color key="textColor" red="0.99607843139999996" green="0.56078431370000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="YIC-of-PUe" firstAttribute="centerX" secondItem="SFR-tm-Ix9" secondAttribute="centerX" id="2FR-JO-fXn"/>
+                                                <constraint firstItem="YIC-of-PUe" firstAttribute="top" secondItem="SFR-tm-Ix9" secondAttribute="top" constant="15" id="GMN-Qp-DEg"/>
+                                                <constraint firstItem="PKF-Gg-EjZ" firstAttribute="top" secondItem="YIC-of-PUe" secondAttribute="bottom" constant="20" id="Ikt-ln-tG2"/>
+                                                <constraint firstItem="Zyz-So-q7d" firstAttribute="centerX" secondItem="SFR-tm-Ix9" secondAttribute="centerX" id="YF9-A8-58y"/>
+                                                <constraint firstItem="PKF-Gg-EjZ" firstAttribute="centerX" secondItem="SFR-tm-Ix9" secondAttribute="centerX" id="YWi-ex-C1j"/>
+                                                <constraint firstItem="Zyz-So-q7d" firstAttribute="top" secondItem="PKF-Gg-EjZ" secondAttribute="bottom" constant="15" id="auO-aV-gme"/>
+                                            </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="160" height="228"/>
+                                        <size key="customSize" width="153" height="222"/>
                                         <connections>
                                             <outlet property="coinsImage" destination="YIC-of-PUe" id="epf-Yx-6Yo"/>
                                             <outlet property="coinsValue" destination="PKF-Gg-EjZ" id="jWo-pq-dTt"/>
@@ -144,6 +221,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="r5c-ig-Ej5"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1gu-57-135" firstAttribute="leading" secondItem="r5c-ig-Ej5" secondAttribute="leading" id="7ha-PR-qAM"/>
+                            <constraint firstItem="1gu-57-135" firstAttribute="trailing" secondItem="r5c-ig-Ej5" secondAttribute="trailing" id="Hxw-n9-53B"/>
+                            <constraint firstItem="1gu-57-135" firstAttribute="top" secondItem="r5c-ig-Ej5" secondAttribute="top" constant="25" id="b0a-Es-3u9"/>
+                            <constraint firstAttribute="bottom" secondItem="1gu-57-135" secondAttribute="bottom" id="bjE-zc-XGd"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Swifties Store" id="8Le-Vu-7yg"/>
                     <connections>
@@ -162,6 +245,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="1k1-2D-31K">
                         <rect key="frame" x="0.0" y="44" width="414" height="96"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.12941176469999999" green="0.1450980392" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
