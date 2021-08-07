@@ -1,7 +1,7 @@
 <img src="https://github.com/esikmalazman/Swift-NFT-iOS/blob/main/1.png?raw=true>">
 
 # Swift-NFT-iOS
- App that allow to purchase virtual currency via In-App Purchase capabilities with Apple StoreKit
+ App that allow to purchase virtual currency via In-App Purchase capabilities from Apple StoreKit
 
 # What Did I Learn
 
