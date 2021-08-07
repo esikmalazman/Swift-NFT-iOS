@@ -20,6 +20,6 @@
 
 - Adding animation to make user experience more intuitive
 - Sync data across device with CloudKit
-
+- Dark mode support
 
 
